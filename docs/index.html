@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>高能效集成电路设计</title>
-    <link rel="stylesheet" href="/集成电路前沿技术概况.9ad09f98.css">
+    <link rel="stylesheet" href="集成电路前沿技术概况.9ad09f98.css">
 
     <!-- You can either enable MathJax by removing the comment blockquotes below, -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
@@ -39,7 +39,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous" onload="renderMathInElement(document.body, {'delimiters': [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script> -->
 
     <!-- This script is used to scan all figures, tables, bibitems and the hyperlinks that lead to them, and resolve all numbers properly, by setting [data-id] to each figure, table and bibitem and setting [data-target-id] to each hyperlink. Later in CSS I insert a ::before whose content is attr(data-target-id) to present readers a proper numbering. -->
-<script src="/集成电路前沿技术概况.9ad09f98.js"></script></head>
+<script src="集成电路前沿技术概况.9ad09f98.js"></script></head>
 
 <body>
     <section class="meta">
@@ -70,14 +70,14 @@
                 随着智能信息化趋势的发展，个人消费类电子产品将继续扩大市场，走进更多人的生活。同时为了支撑数量如此庞大的智能设备、以及计算的云端化来降低终端设备的成本，需要成倍的数据中心在背后运转来提供数据处理、汇总、分析等服务，这些数据中心的能源消耗将会是指数级增长。卫报<a href="#guardian2017"></a>预计到2025年，ICT产业将会消耗掉全球电能产出的五分之一，其中大部分都会是数据中心消耗掉的。
             </p>
             <figure>
-                <img src="/ict-as-a-country.4cb4792c.png" alt="">
+                <img src="ict-as-a-country.4cb4792c.png" alt="">
                 <figcaption>ICT如果是一个国家，年能源消耗会排到世界第三。</figcaption>
             </figure>
             <p>
                 ICT对能源的巨大需求可能会导致再一次能源危机。如图<a href="#fig-ict-future"></a>所示，未来清洁能源——如可控核聚变——一再跳票、遥遥无期，这使得世界能源年生产量将在可见的未来遵循线性增长的趋势，而不是指数级增长。线性增长的能源产量与指数级增长的ICT对能源的需求是一对巨大的矛盾。一方面，能源产量的限制会对ICT产业未来发展带来巨大限制，成为ICT产业进步的最大阻力；另一方面，ICT产业产生的大量排放会成为全球温室气体排放的主要部分，虽然ICT产业相对于传统的、依赖石油的产业来说排放小很多，但是数量摆在那里，影响不可小觑。
             </p>
             <figure id="fig-ict-future">
-                <img src="/ict-future.dd18e54b.png" alt="">
+                <img src="ict-future.dd18e54b.png" alt="">
                 <figcaption>对ICT能源消耗的预测<a href="#semiengineering2016"></a> 。将在2035年后超过世界总能源生产量，但显然能源消耗不可能超过能源生产，所以ICT能源消耗会以能源产量为极限逐渐逼近。</figcaption>
             </figure>
             <p>
@@ -94,14 +94,14 @@
                 在目前广泛应用的4G通信规范中，有一种叫做正交频分复用（Orthogonal Frequency Division Multiplexing）的技术，它将不同频率的频带切分成若干个正交的、无不干扰的频道，从而使得每个频道在信道中的增益近似恒定。这项技术极大地提升了4G的数据传输速率和数据完整性。
             </p>
             <figure>
-                <img src="/ofdm-explained.2ea63440.png" alt="">
+                <img src="ofdm-explained.2ea63440.png" alt="">
                 <figcaption>OFDM示意图。从整个可用频带来看，因为频带很宽，信道的增益特性差异极大，但切分成若干个正交子频带后，对于每个子频带来说，信道对频率的响应近似恒定。</figcaption>
             </figure>
             <p>
                 在极大提升终端用户体验的同时，OFDM的缺陷逐渐显露出来，其中对于电路工程师最突出的问题是OFDM的大峰均比（peak-to-average power ratio）问题。设想在某些情况下，各个频道空闲，因此从时域看来，波形的幅度非常低，但在另外一些特殊情况下，各个频道非常繁忙，如果同时有很多频道恰好处于高电压值，那么从时域上看，就会产生如图<a href="#fig-ofdm-big-papr"></a>那样的一个非常高的峰。
             </p>
             <figure id="fig-ofdm-big-papr">
-                <img src="/ofdm-big-papr.a3f6b3d4.png" alt="">
+                <img src="ofdm-big-papr.a3f6b3d4.png" alt="">
                 <figcaption>OFDM的大峰均比问题</figcaption>
             </figure>
             <p>
@@ -124,11 +124,11 @@
                 </p>
                 <figure class="figure figure--columned">
                     <figure id="fig-doherty">
-                        <img src="/doherty-pa.b9908797.png" alt="">
+                        <img src="doherty-pa.b9908797.png" alt="">
                         <figcaption>Doherty功率放大器</figcaption>
                     </figure>
                     <figure id="fig-digital">
-                        <img src="/digital-pa.f2bbfae8.png" alt="">
+                        <img src="digital-pa.f2bbfae8.png" alt="">
                         <figcaption>数字功率放大器</figcaption>
                     </figure>
                 </figure>
@@ -139,7 +139,7 @@
                     然而，这两种方式都需要额外的功率放大器，会占据非常大的面积，在芯片面积逐渐缩小的今天显得不太合适；此外这些方案的线性性、频率范围等指标也很难满足4G高频段的要求。动态电源调制器就可以不在附加额外功率放大器的前提下降低大峰均比的影响。
                 </p>
                 <figure id="fig-supply-modulator">
-                    <img src="/supply-modulator.a44408b8.png" alt="">
+                    <img src="supply-modulator.a44408b8.png" alt="">
                     <figcaption>动态电源调制器</figcaption>
                 </figure>
                 <p>
@@ -148,11 +148,11 @@
                 <figure>
                     <figure class="figure figure--columned">
                         <figure id="fig-linear-regulator">
-                            <img src="/linear-regulator.9e06f184.png" alt="">
+                            <img src="linear-regulator.9e06f184.png" alt="">
                             <figcaption>线性稳压器</figcaption>
                         </figure>
                         <figure id="fig-switching-regulator">
-                            <img src="/switching-regulator.2d146bd8.png" alt="">
+                            <img src="switching-regulator.2d146bd8.png" alt="">
                             <figcaption>开关转换器</figcaption>
                         </figure>
                     </figure>
@@ -161,7 +161,7 @@
                     那么，有没有办法将两者的优点结合起来，并且规避各自的缺点呢？一种被称为混合电源调制器的组件被发明出来了<a href="#zee1999"></a>。如图<a href="#fig-hybrid-supply-modulator"></a>所示，混合电源调制器形似线性稳压器和开关转换器的合体，它们之间由一个电流检测器相连。
                 </p>
                 <figure id="hybrid-supply-modulator">
-                    <img src="/hybrid-supply-modulator.b03db7df.png" alt="">
+                    <img src="hybrid-supply-modulator.b03db7df.png" alt="">
                     <figcaption>混合电源调制器。<span style="color: red;">红框</span>内是线性稳压器，<span style="color: blue;">蓝框</span>内是开关转换器。</figcaption>
                 </figure>
             </section>
@@ -180,7 +180,7 @@
         </section>
     </main>
 
-    <script src="/集成电路前沿技术概况.e31bb0bc.js"></script>
+    <script src="集成电路前沿技术概况.e31bb0bc.js"></script>
 </body>
 
 </html>

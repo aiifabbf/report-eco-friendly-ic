@@ -11261,25 +11261,25 @@ module.exports = [{
   "other": "1999"
 }];
 },{}],"digital-pa.png":[function(require,module,exports) {
-module.exports = "/digital-pa.f2bbfae8.png";
+module.exports = "digital-pa.f2bbfae8.png";
 },{}],"doherty-pa.png":[function(require,module,exports) {
-module.exports = "/doherty-pa.b9908797.png";
+module.exports = "doherty-pa.b9908797.png";
 },{}],"hybrid-supply-modulator.png":[function(require,module,exports) {
-module.exports = "/hybrid-supply-modulator.b03db7df.png";
+module.exports = "hybrid-supply-modulator.b03db7df.png";
 },{}],"ict-as-a-country.png":[function(require,module,exports) {
-module.exports = "/ict-as-a-country.4cb4792c.png";
+module.exports = "ict-as-a-country.4cb4792c.png";
 },{}],"ict-future.png":[function(require,module,exports) {
-module.exports = "/ict-future.dd18e54b.png";
+module.exports = "ict-future.dd18e54b.png";
 },{}],"linear-regulator.png":[function(require,module,exports) {
-module.exports = "/linear-regulator.9e06f184.png";
+module.exports = "linear-regulator.9e06f184.png";
 },{}],"ofdm-big-papr.png":[function(require,module,exports) {
-module.exports = "/ofdm-big-papr.a3f6b3d4.png";
+module.exports = "ofdm-big-papr.a3f6b3d4.png";
 },{}],"ofdm-explained.png":[function(require,module,exports) {
-module.exports = "/ofdm-explained.2ea63440.png";
+module.exports = "ofdm-explained.2ea63440.png";
 },{}],"supply-modulator.png":[function(require,module,exports) {
-module.exports = "/supply-modulator.a44408b8.png";
+module.exports = "supply-modulator.a44408b8.png";
 },{}],"switching-regulator.png":[function(require,module,exports) {
-module.exports = "/switching-regulator.2d146bd8.png";
+module.exports = "switching-regulator.2d146bd8.png";
 },{}],"*.png":[function(require,module,exports) {
 module.exports = {
   "digital-pa": require("./digital-pa.png"),
@@ -11343,7 +11343,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43079" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42285" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
@@ -11486,4 +11486,4 @@ function hmrAccept(bundle, id) {
   });
 }
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/集成电路前沿技术概况.e31bb0bc.map
+//# sourceMappingURL=集成电路前沿技术概况.e31bb0bc.map
