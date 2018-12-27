@@ -1,0 +1,44 @@
+[
+    {
+        "label": "guardian2017",
+        "authors": null,
+        "title": "‘Tsunami of data’ could consume one fifth of global electricity by 2025",
+        "journal": "The Guardian",
+        "other": "2017"
+    },
+    {
+        "label": "semiengineering2016",
+        "authors": "Ann Steffora Mutschler",
+        "title": "Running Out Of Energy?",
+        "journal": "Semiconductor Engineering",
+        "other": 2016
+    },
+    {
+        "label": "kim2013",
+        "authors": "Bumman Kim et al",
+        "title": "Push the Envelope: Design Concepts for Envelope-Tracking Power Amplifiers",
+        "journal": "IEEE Microwave Magazine",
+        "other": "2013"
+    },
+    {
+        "label": "tan2017",
+        "authors": "Min Tan et al",
+        "title": "A 100 MHz Hybrid Supply Modulator With Ripple-Current-Based PWM Control",
+        "journal": "IEEE Journal of Solid-State Circuits",
+        "other": "2017"
+    },
+    {
+        "label": "doherty1936",
+        "authors": "W. H. Doherty",
+        "title": "A New High Efficiency Power Amplifier for Modulated Waves",
+        "journal": "IEEE RCIC Virtual Journal",
+        "other": "1936"
+    },
+    {
+        "label": "zee1999",
+        "authors": "R. A. R. van der Zee",
+        "title": "A power-efficient audio amplifier combining switching and linear techniques",
+        "journal": "IEEE Journal of Solid-State Circuits",
+        "other": "1999"
+    }
+]

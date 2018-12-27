@@ -1,0 +1,19 @@
+{
+  "name": "lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel -d ./docs/ index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.21"
+  }
+}

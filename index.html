@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>高能效集成电路设计</title>
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- You can either enable MathJax by removing the comment blockquotes below, -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        },
+        "TeX": {
+            equationNumbers: {
+                autoNumber: "AMS"
+            }
+        }
+    });
+    </script>
+
+    <!-- ...Or enable KaTeX which is faster but supports more poorly than MathJax by removing the following comment blockquote -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous" onload="renderMathInElement(document.body, {'delimiters': [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script> -->
+
+    <!-- This script is used to scan all figures, tables, bibitems and the hyperlinks that lead to them, and resolve all numbers properly, by setting [data-id] to each figure, table and bibitem and setting [data-target-id] to each hyperlink. Later in CSS I insert a ::before whose content is attr(data-target-id) to present readers a proper numbering. -->
+</head>
+
+<body>
+    <section class="meta">
+        <h1 class="meta__title">高能效集成电路设计</h1>
+        <h2 class="meta__author">施宇晨</h2>
+        <h2 class="meta__address">光学与电子信息学院</h2>
+    </section>
+
+    <main id="app" class="main main--columned">
+        <section class="abstract">
+            <h1>摘要</h1>
+            <p>
+                本文从能源发展趋势论证了高能效集成电路的必要性，研究了目前最主要的两种器件级节能手段——电源调制器和集成光电子器件——的目标和原理。
+            </p>
+        </section>
+
+        <section>
+            <!-- # 集成电路工程前沿前沿技术概论 - 高能效集成电路设计 -->
+
+            <h1>高能效集成电路的必要性</h1>
+            <p>
+                当前全球ICT能源消耗总量已达1817 TWh/年，如果ICT是一个独立的国家，它的全年能源消耗总量可以排到全球第三，仅次于中国和美国的全年能源消耗总量。
+            </p>
+            <p>
+                这其中，大部分能源用于驱动各种消费类电子设备，如智能手机、个人桌面电脑等；用于网络的能源消耗——比如无线局域网、基站、光纤通信等——和制造电子设备的能源总量旗鼓相当，各自约占电子设备能源消耗总量的一半；用于数据中心的能源消耗目前总量略小于网络消耗。
+            </p>
+            <p>
+                随着智能信息化趋势的发展，个人消费类电子产品将继续扩大市场，走进更多人的生活。同时为了支撑数量如此庞大的智能设备、以及计算的云端化来降低终端设备的成本，需要成倍的数据中心在背后运转来提供数据处理、汇总、分析等服务，这些数据中心的能源消耗将会是指数级增长。卫报<a href="#guardian2017"></a>预计到2025年，ICT产业将会消耗掉全球电能产出的五分之一，其中大部分都会是数据中心消耗掉的。
+            </p>
+            <figure>
+                <img src="./ict-as-a-country.png" alt="">
+                <figcaption>ICT如果是一个国家，年能源消耗会排到世界第三。</figcaption>
+            </figure>
+            <p>
+                ICT对能源的巨大需求可能会导致再一次能源危机。如图<a href="#fig-ict-future"></a>所示，未来清洁能源——如可控核聚变——一再跳票、遥遥无期，这使得世界能源年生产量将在可见的未来遵循线性增长的趋势，而不是指数级增长。线性增长的能源产量与指数级增长的ICT对能源的需求是一对巨大的矛盾。一方面，能源产量的限制会对ICT产业未来发展带来巨大限制，成为ICT产业进步的最大阻力；另一方面，ICT产业产生的大量排放会成为全球温室气体排放的主要部分，虽然ICT产业相对于传统的、依赖石油的产业来说排放小很多，但是数量摆在那里，影响不可小觑。
+            </p>
+            <figure id="fig-ict-future">
+                <img src="./ict-future.png" alt="">
+                <figcaption>对ICT能源消耗的预测<a href="#semiengineering2016"></a> 。将在2035年后超过世界总能源生产量，但显然能源消耗不可能超过能源生产，所以ICT能源消耗会以能源产量为极限逐渐逼近。</figcaption>
+            </figure>
+            <p>
+                如何应对ICT的能耗挑战将是未来十到二十年全球ICT从业者需要共同面对的问题。从本质上看，应对这次能耗挑战的角度无非就是老生常谈的“开源”和“节流”两方面。开源意味着要突破ICT所能利用的能耗的上限，即全球能源年产量，但正如上文提到的，要使能源产量突破线性增长，我们需要的可能是核聚变等颠覆性的技术，然而在当前及可观的未来，这项技术难以面世。因此开源实际上难以实现。
+            </p>
+            <p>
+                那么只能从节流的角度来应对危机了。可用于节流的手段有很多，从法律和社会角度，可以约束大互联网公司，促使他们关注数据中心的能源和排放问题，可以限制挖矿机等需要消耗大量电力的应用。从技术角度，可以从顶层架构设计、底层电路实现等各个方面实现能源的更高效利用。
+            </p>
+        </section>
+
+        <section>
+            <h1>混合电源调制器</h1>
+            <p>
+                在目前广泛应用的4G通信规范中，有一种叫做正交频分复用（Orthogonal Frequency Division Multiplexing）的技术，它将不同频率的频带切分成若干个正交的、无不干扰的频道，从而使得每个频道在信道中的增益近似恒定。这项技术极大地提升了4G的数据传输速率和数据完整性。
+            </p>
+            <figure>
+                <img src="./ofdm-explained.png" alt="">
+                <figcaption>OFDM示意图。从整个可用频带来看，因为频带很宽，信道的增益特性差异极大，但切分成若干个正交子频带后，对于每个子频带来说，信道对频率的响应近似恒定。</figcaption>
+            </figure>
+            <p>
+                在极大提升终端用户体验的同时，OFDM的缺陷逐渐显露出来，其中对于电路工程师最突出的问题是OFDM的大峰均比（peak-to-average power ratio）问题。设想在某些情况下，各个频道空闲，因此从时域看来，波形的幅度非常低，但在另外一些特殊情况下，各个频道非常繁忙，如果同时有很多频道恰好处于高电压值，那么从时域上看，就会产生如图<a href="#fig-ofdm-big-papr"></a>那样的一个非常高的峰。
+            </p>
+            <figure id="fig-ofdm-big-papr">
+                <img src="./ofdm-big-papr.png" alt="">
+                <figcaption>OFDM的大峰均比问题</figcaption>
+            </figure>
+            <p>
+                因此为了应对这种高峰，整个射频功率放大器都要工作在高电源电压下。尽管频带大多数情况下空闲，上面提到的那种高峰不太可能出现，但是电路设计者不能因为这种情况少见就不为这种情况做准备而自说自话、降低电源电压，否则一旦遇到这种情况，信号就会严重畸变，整个通信电路完全丧失功能。
+            </p>
+            <p>
+                模拟电路一直工作在高电源电压下就意味着一直消耗巨大的功率。因为模拟电路不像数字电路——特别是现代CMOS数字电路，它们在稳态时几乎不消耗功率，只在切换状态时由于充电放电消耗一些功率——模拟电路中一直有偏置电流、电流镜等组件，它们是一直通电的。这样一条电流通路加上高电源电压，由功耗公式
+                $$
+                P = U I
+                $$
+                自然而然地会消耗巨大功率。从终端用户的视角看，就是4G手机的续航时间明显下降了。这显然是很不好的用户体验。
+            </p>
+            <p>
+                为了节省功耗，一个非常自然的想法<a href="#kim2013"></a>就是不要让射频功率放大器上的电源电压$V_{\rm DD}$一直保持在高电压状态，因为出现高峰的情况毕竟是少见的情况；而一旦遇到高峰，也要能及时响应、调高电源电压，否则电路就工作不正常了。因此我们希望能设计出这样一种电源调制器，它能根据当前时刻输出的电压值，自动给射频功率放大器供给合适大小的电源电压。如果当前输出电压不需要很高，那么它也就给放大器输出低电源电压，来节省功耗；如果当前输出电压出现了高峰，那么它也要及时调高电源电压，保证通信质量。
+            </p>
+            <section>
+                <h2>研究进展</h2>
+                <p>
+                    有很多方法可以显著降低大峰均比带来的影响。如图<a href="#fig-doherty"></a>所示的Doherty功率放大器<a href="#doherty1936"></a> ，将输入分为两路，一路送入工作在class A或class AB下的所谓的载波放大器中，另一路送入工作在class C下的所谓的峰放大器。载波放大器主要用于通常情况的放大，而峰放大器专门用于处理高峰的情况。最后两路信号再合并。
+                </p>
+                <figure class="figure figure--columned">
+                    <figure id="fig-doherty">
+                        <img src="./doherty-pa.png" alt="">
+                        <figcaption>Doherty功率放大器</figcaption>
+                    </figure>
+                    <figure id="fig-digital">
+                        <img src="./digital-pa.png" alt="">
+                        <figcaption>数字功率放大器</figcaption>
+                    </figure>
+                </figure>
+                <p>
+                    如图<a href="#fig-digital"></a>所示的数字功率放大器接受一个数字信号输入，将高低位用解码器分离，用于控制不同增益的放大器。高位信号（most significant bit）控制高增益放大器，低位信号（least significant bit）控制低增益放大器，这样如果在空闲时段，高增益放大器根本就不开启，也就不消耗功率了；而在出现高峰的时段，高位信号有效，所以高增益放大器能按需开启，保证信号增益幅度。
+                </p>
+                <p>
+                    然而，这两种方式都需要额外的功率放大器，会占据非常大的面积，在芯片面积逐渐缩小的今天显得不太合适；此外这些方案的线性性、频率范围等指标也很难满足4G高频段的要求。动态电源调制器就可以不在附加额外功率放大器的前提下降低大峰均比的影响。
+                </p>
+                <figure id="fig-supply-modulator">
+                    <img src="./supply-modulator.png" alt="">
+                    <figcaption>动态电源调制器</figcaption>
+                </figure>
+                <p>
+                    如图<a href="#fig-supply-modulator"></a>的动态电源调制器，通过跟踪输出信号的包络，来动态调整提供给射频功率放大器的电源电压。为了实现包络信号的实时跟踪，可以采用如图<a href="#fig-linear-regulator"></a>所示的线性稳压器或者开关转换器，或者如图<a href="#fig-switching-regulator"></a>所示的开关转换器。然而，线性稳压器虽然能支持较大的带宽、线性度较高、对纹波有较好的抑制，在能效上却大不如开关转换器；开关转换器虽然能源效率很高，支持的带宽却不够高，对纹波也很敏感，线性度也不够高。仿佛线性稳压器和开关转换器是一对特性非常互补的组件。
+                </p>
+                <figure>
+                    <figure class="figure figure--columned">
+                        <figure id="fig-linear-regulator">
+                            <img src="./linear-regulator.png" alt="">
+                            <figcaption>线性稳压器</figcaption>
+                        </figure>
+                        <figure id="fig-switching-regulator">
+                            <img src="./switching-regulator.png" alt="">
+                            <figcaption>开关转换器</figcaption>
+                        </figure>
+                    </figure>
+                </figure>
+                <p>
+                    那么，有没有办法将两者的优点结合起来，并且规避各自的缺点呢？一种被称为混合电源调制器的组件被发明出来了<a href="#zee1999"></a>。如图<a href="#fig-hybrid-supply-modulator"></a>所示，混合电源调制器形似线性稳压器和开关转换器的合体，它们之间由一个电流检测器相连。
+                </p>
+                <figure id="hybrid-supply-modulator">
+                    <img src="./hybrid-supply-modulator.png" alt="">
+                    <figcaption>混合电源调制器。<span style="color: red;">红框</span>内是线性稳压器，<span style="color: blue;">蓝框</span>内是开关转换器。</figcaption>
+                </figure>
+            </section>
+        </section>
+
+        <section>
+            <h1 class="header--no-numbering">参考文献</h1>
+            <ul class="bibliography">
+                <li v-for="item of bibitems" class="bibliography__item" :id="item.label">
+                    <span class="bibliography__item__authors" v-if="item.authors !== null">{{ item.authors }}</span>
+                    <span class="bibliography__item__title" v-if="item.title !== null">{{ item.title }}</span>
+                    <span class="bibliography__item__journal" v-if="item.journal !== null ">{{ item.journal }}</span>
+                    <span class="bibliography__item__other" v-if="item.other !== null">{{ item.other }}</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
