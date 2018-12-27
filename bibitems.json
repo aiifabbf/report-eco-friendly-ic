@@ -40,5 +40,33 @@
         "title": "A power-efficient audio amplifier combining switching and linear techniques",
         "journal": "IEEE Journal of Solid-State Circuits",
         "other": "1999"
+    },
+    {
+        "label": "beamer2010",
+        "authors": "Scott Beamer et al",
+        "title": "Re-architecting DRAM memory systems with monolithically integrated silicon photonics",
+        "journal": "ISCA",
+        "other": "2010"
+    },
+    {
+        "label": "sun2015",
+        "authors": "Chen Sun et al",
+        "title": "Single-chip microprocessor that communicates directly using light",
+        "journal": "Nature",
+        "other": "2015"
+    },
+    {
+        "label": "sun2016",
+        "authors": "Chen Sun et al",
+        "title": "A 45 nm CMOS-SOI Monolithic Photonics Platform With Bit-Statistics-Based Resonant Microring Thermal Tuning",
+        "journal": "IEEE Journal of Solid-State Circuits",
+        "other": "2016"
+    },
+    {
+        "label": "saeedi2015",
+        "authors": "Sama Saeedi and Azita Emami",
+        "title": "Silicon-photonic PTAT temperature sensor for micro-ring resonator thermal stabilization",
+        "journal": "Optics Express",
+        "other": "2015"
     }
 ]

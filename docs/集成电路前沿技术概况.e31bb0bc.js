@@ -11259,6 +11259,30 @@ module.exports = [{
   "title": "A power-efficient audio amplifier combining switching and linear techniques",
   "journal": "IEEE Journal of Solid-State Circuits",
   "other": "1999"
+}, {
+  "label": "beamer2010",
+  "authors": "Scott Beamer et al",
+  "title": "Re-architecting DRAM memory systems with monolithically integrated silicon photonics",
+  "journal": "ISCA",
+  "other": "2010"
+}, {
+  "label": "sun2015",
+  "authors": "Chen Sun et al",
+  "title": "Single-chip microprocessor that communicates directly using light",
+  "journal": "Nature",
+  "other": "2015"
+}, {
+  "label": "sun2016",
+  "authors": "Chen Sun et al",
+  "title": "A 45 nm CMOS-SOI Monolithic Photonics Platform With Bit-Statistics-Based Resonant Microring Thermal Tuning",
+  "journal": "IEEE Journal of Solid-State Circuits",
+  "other": "2016"
+}, {
+  "label": "saeedi2015",
+  "authors": "Sama Saeedi and Azita Emami",
+  "title": "Silicon-photonic PTAT temperature sensor for micro-ring resonator thermal stabilization",
+  "journal": "Optics Express",
+  "other": "2015"
 }];
 },{}],"digital-pa.png":[function(require,module,exports) {
 module.exports = "digital-pa.f2bbfae8.png";
@@ -11272,14 +11296,24 @@ module.exports = "ict-as-a-country.4cb4792c.png";
 module.exports = "ict-future.dd18e54b.png";
 },{}],"linear-regulator.png":[function(require,module,exports) {
 module.exports = "linear-regulator.9e06f184.png";
+},{}],"loop-impedance.png":[function(require,module,exports) {
+module.exports = "loop-impedance.37eba96d.png";
+},{}],"loop-temperature.png":[function(require,module,exports) {
+module.exports = "loop-temperature.b27c294d.png";
 },{}],"ofdm-big-papr.png":[function(require,module,exports) {
 module.exports = "ofdm-big-papr.a3f6b3d4.png";
 },{}],"ofdm-explained.png":[function(require,module,exports) {
 module.exports = "ofdm-explained.2ea63440.png";
+},{}],"pll.png":[function(require,module,exports) {
+module.exports = "pll.eacc3d26.png";
 },{}],"supply-modulator.png":[function(require,module,exports) {
 module.exports = "supply-modulator.a44408b8.png";
 },{}],"switching-regulator.png":[function(require,module,exports) {
 module.exports = "switching-regulator.2d146bd8.png";
+},{}],"temperature-effect.png":[function(require,module,exports) {
+module.exports = "temperature-effect.c71d8618.png";
+},{}],"wll.png":[function(require,module,exports) {
+module.exports = "wll.f3537c8e.png";
 },{}],"*.png":[function(require,module,exports) {
 module.exports = {
   "digital-pa": require("./digital-pa.png"),
@@ -11288,12 +11322,17 @@ module.exports = {
   "ict-as-a-country": require("./ict-as-a-country.png"),
   "ict-future": require("./ict-future.png"),
   "linear-regulator": require("./linear-regulator.png"),
+  "loop-impedance": require("./loop-impedance.png"),
+  "loop-temperature": require("./loop-temperature.png"),
   "ofdm-big-papr": require("./ofdm-big-papr.png"),
   "ofdm-explained": require("./ofdm-explained.png"),
+  "pll": require("./pll.png"),
   "supply-modulator": require("./supply-modulator.png"),
-  "switching-regulator": require("./switching-regulator.png")
+  "switching-regulator": require("./switching-regulator.png"),
+  "temperature-effect": require("./temperature-effect.png"),
+  "wll": require("./wll.png")
 };
-},{"./digital-pa.png":"digital-pa.png","./doherty-pa.png":"doherty-pa.png","./hybrid-supply-modulator.png":"hybrid-supply-modulator.png","./ict-as-a-country.png":"ict-as-a-country.png","./ict-future.png":"ict-future.png","./linear-regulator.png":"linear-regulator.png","./ofdm-big-papr.png":"ofdm-big-papr.png","./ofdm-explained.png":"ofdm-explained.png","./supply-modulator.png":"supply-modulator.png","./switching-regulator.png":"switching-regulator.png"}],"index.js":[function(require,module,exports) {
+},{"./digital-pa.png":"digital-pa.png","./doherty-pa.png":"doherty-pa.png","./hybrid-supply-modulator.png":"hybrid-supply-modulator.png","./ict-as-a-country.png":"ict-as-a-country.png","./ict-future.png":"ict-future.png","./linear-regulator.png":"linear-regulator.png","./loop-impedance.png":"loop-impedance.png","./loop-temperature.png":"loop-temperature.png","./ofdm-big-papr.png":"ofdm-big-papr.png","./ofdm-explained.png":"ofdm-explained.png","./pll.png":"pll.png","./supply-modulator.png":"supply-modulator.png","./switching-regulator.png":"switching-regulator.png","./temperature-effect.png":"temperature-effect.png","./wll.png":"wll.png"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./auto-numbering");
@@ -11343,7 +11382,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42285" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44917" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
